@@ -106,6 +106,19 @@
 </footer>
 
   <!-- JS para filtros -->
+   <!-- Redirigir portafolio.html a la URL base -->
+<script>
+  (function() {
+    // Obtener la ruta actual
+    const path = window.location.pathname;
+    // Si termina en "portafolio.html", eliminarlo
+    if(path.endsWith("portafolio.html")) {
+      const cleanPath = path.replace("portafolio.html", "");
+      window.history.replaceState({}, "", cleanPath);
+    }
+  })();
+</script>
+
   <script>
     const filterBtns = document.querySelectorAll('.filter-btn');
     const cards = document.querySelectorAll('.portfolio-card');

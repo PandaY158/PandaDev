@@ -182,3 +182,4 @@ document.querySelectorAll('.skill-card').forEach(card => {
     if(lang) modalWrapper.classList.add(lang);
   });
 });
+

@@ -135,6 +135,19 @@
     </div>
 
     <!-- JS -->
+    <!-- Redirigir index.html a la URL base -->
+<script>
+  (function() {
+    // Obtener la ruta actual
+    const path = window.location.pathname;
+    // Si termina en "index.html", eliminarlo
+    if(path.endsWith("index.html")) {
+      const cleanPath = path.replace("index.html", "");
+      window.history.replaceState({}, "", cleanPath);
+    }
+  })();
+</script>
+
     <script src="js/main.js"></script>
   </body>
   </html>
