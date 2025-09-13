@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - Panda</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <img src="img/logo.png" alt="Logo Panda" class="brand-logo">
+        <div class="brand-text">
+          <h1>Panda</h1>
+          <small>Estudiante de Ingeniería de Sistemas</small>
+        </div>
+      </div>
+
+      <!-- Navigation -->
+      <nav class="main-nav">
+        <div class="nav-toggle" id="nav-toggle">
+          <i class="fas fa-bars"></i>
+        </div>
+        <ul id="nav-menu">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="portafolio.html" class="active">Portafolio</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Portfolio Section -->
+  <main class="main-content container">
+    <section id="portfolio" class="portfolio">
+      <h2>Mis Proyectos y Creaciones</h2>
+      <p class="sub">Diseños, bots de Discord, aplicaciones y más</p>
+
+      <!-- Filtros -->
+      <div class="portfolio-filters">
+        <button data-filter="all" class="filter-btn active">Todos</button>
+        <button data-filter="diseño" class="filter-btn">Diseños</button>
+        <button data-filter="bot" class="filter-btn">Bots</button>
+        <button data-filter="app" class="filter-btn">Webs</button>
+      </div>
+
+      <!-- Galería -->
+      <div class="portfolio-grid">
+        <!-- Proyecto 1 -->
+        <div class="portfolio-card" data-category="diseño">
+          <img src="assets/img/diseño1.jpeg" alt="Diseño 1">
+          <div class="portfolio-overlay">
+            <h3>Diseño Creativo</h3>
+            <button class="view-btn" data-modal="modal1">Ver más</button>
+          </div>
+        </div>
+
+        <!-- Proyecto 2 -->
+        <div class="portfolio-card" data-category="bot">
+          <img src="assets/img/muy pronto.jpg" alt="Bot Discord 1">
+          <div class="portfolio-overlay">
+            <h3>Bot Discord</h3>
+            <button class="view-btn" data-modal="modal2">Ver más</button>
+          </div>
+        </div>
+
+        <!-- Proyecto 3 -->
+        <div class="portfolio-card" data-category="app">
+          <img src="assets/img/imagen.png" alt="Web">
+          <div class="portfolio-overlay">
+            <h3>Web</h3>
+            <button class="view-btn" data-modal="modal3">Ver más</button>
+          </div>
+        </div>
+
+        <!-- mas proyectos -->
+      </div>
+    </section>
+  </main>
+
+ <!-- Footer -->
+<footer class="footer">
+  <div class="footer-container">
+    <p class="footer-text">© 2025 PandaDev | Todos los derechos reservados</p>
+    <div class="social-icons">
+      <a href="https://youtube.com" target="_blank" class="social-icon youtube">
+        <i class="fab fa-youtube"></i>
+      </a>
+      <a href="https://instagram.com" target="_blank" class="social-icon instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://x.com" target="_blank" class="social-icon twitter">
+        <i class="fab fa-x-twitter"></i>
+      </a>
+      <a href="https://github.com" target="_blank" class="social-icon github">
+        <i class="fab fa-github"></i>
+      </a>
+      <!-- <a href="https://twitch.tv" target="_blank" class="social-icon twitch">
+        <i class="fab fa-twitch"></i>
+      </a> -->
+    </div>
+  </div>
+</footer>
+
+  <!-- JS para filtros -->
+  <script>
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const cards = document.querySelectorAll('.portfolio-card');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const filter = btn.dataset.filter;
+        cards.forEach(card => {
+          if(filter === 'all' || card.dataset.category === filter){
+            card.style.display = 'block';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

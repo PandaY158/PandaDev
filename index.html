@@ -1,0 +1,140 @@
+  <!DOCTYPE html>
+  <html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio Panda</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  </head>
+  <body>
+
+    <!-- Header -->
+    <header class="site-header">
+      <div class="container header-inner">
+        <div class="brand">
+          <img src="img/logo.png" alt="Logo Panda" class="brand-logo">
+          <div class="brand-text">
+            <h1>Panda</h1>
+            <small>Estudiante de Ingeniería de Sistemas</small>
+          </div>
+        </div>
+
+        <!-- Navigation -->
+<nav class="main-nav">
+  <div class="nav-toggle" id="nav-toggle">
+    <i class="fas fa-bars"></i>
+  </div>
+  <ul id="nav-menu">
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="portafolio.html">Portafolio</a></li>
+    <li><a href="contacto.html">Contacto</a></li>
+  </ul>
+</nav>
+
+      </div>
+    </header>
+
+    <!-- Banner / Hero -->
+    <section id="inicio" class="hero">
+      <img src="img/banner.jpg" alt="Banner" class="hero-banner">
+      <div class="hero-overlay">
+        <h2>Hola, soy <span class="accent">Panda</span></h2>
+        <p>Apasionado por el desarrollo y la tecnología</p>
+        <p class="mini">Explora mis proyectos y habilidades</p>
+      </div>
+    </section>
+
+    <!-- Main -->
+    <main class="main-content container">
+      <!-- About -->
+      <section id="about" class="about">
+        <h2>Sobre mí</h2>
+        <p>
+          Soy estudiante de Ingeniería de Sistemas con experiencia en varios lenguajes de programación.
+          Me gusta crear proyectos innovadores, resolver problemas y aprender constantemente.
+        </p>
+      </section>
+
+      <!-- Lenguajes -->
+      <section id="languages" class="languages">
+        <h2>Lenguajes y Tecnologías</h2>
+        <p class="sub">Haz clic en cada uno para ver más</p>
+        <div class="skills-grid">
+          <div class="skill-card" data-lang="html">
+            <img src="assets/img/html.webp" alt="HTML">
+            <p>HTML</p>
+          </div>
+          <div class="skill-card" data-lang="css">
+            <img src="assets/img/css.png" alt="CSS">
+            <p>CSS</p>
+          </div>
+          <div class="skill-card" data-lang="javascript">
+            <img src="assets/img/javascript.webp" alt="JavaScript">
+            <p>JavaScript</p>
+          </div>
+          <div class="skill-card" data-lang="python">
+            <img src="assets/img/python.png" alt="Python">
+            <p>Python</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+    <div class="footer-container">
+      <p class="footer-text">© 2025 PandaDev | Todos los derechos reservados</p>
+      <div class="social-icons">
+        <a href="https://youtube.com" target="_blank" class="social-icon youtube">
+          <i class="fab fa-youtube"></i>
+        </a>
+        <a href="https://instagram.com" target="_blank" class="social-icon instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://x.com" target="_blank" class="social-icon twitter">
+          <i class="fab fa-x-twitter"></i>
+        </a>
+        <a href="https://github.com" target="_blank" class="social-icon github">
+          <i class="fab fa-github"></i>
+        </a>
+      <!--<a href="https://twitch.tv" target="_blank" class="social-icon twitch">
+          <i class="fab fa-twitch"></i>
+        </a>-->
+      </div>
+    </div>
+  </footer>
+
+
+    <!-- Modal -->
+    <div id="modal" class="modal" aria-hidden="true">
+      <div class="modal-wrapper">
+        <div class="modal-left">
+          <img id="modal-logo" src="" alt="logo">
+          <div class="modal-meta">
+            <h3 id="modal-title"></h3>
+            <p id="modal-desc"></p>
+          </div>
+        </div>
+        <div class="modal-right">
+          <div class="carousel">
+            <button id="prevBtn">&#10094;</button>
+            <div class="slides-viewport">
+              <div id="slides-wrapper" class="slides-wrapper"></div>
+            </div>
+            <button id="nextBtn">&#10095;</button>
+          </div>
+          <div class="project-info">
+            <h4 id="project-title"></h4>
+            <p id="project-desc"></p>
+            <div id="project-links"></div>
+          </div>
+        </div>
+        <button class="modal-close" onclick="closeModal()">✖</button>
+      </div>
+    </div>
+
+    <!-- JS -->
+    <script src="js/main.js"></script>
+  </body>
+  </html>
